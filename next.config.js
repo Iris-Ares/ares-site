@@ -1,4 +1,21 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const withLess = require("next-with-less");
+const path = require('node:path');
 
-module.exports = nextConfig
+
+const nextConfig = {
+    webpack(config, options) {
+        config.module.rules.forEach((rule) => {
+          const { oneOf } = rule;
+          if (oneOf) {
+            oneOf.forEach((one) => {
+              if (!`${one.issuer?.and}`.includes('_app')) return;
+              one.issuer.and = [path.resolve(__dirname)];
+            });
+          }
+        })
+        return config;
+    }
+}
+
+module.exports = nextConfig;
