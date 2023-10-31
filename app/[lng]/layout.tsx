@@ -3,9 +3,9 @@ import { Inter } from 'next/font/google'
 import { Metadata, ResolvingMetadata } from 'next'
 
 import { dir } from 'i18next'
-import { languages } from '^app/i18n/settings'
-
+import { languages } from '@/app/i18n/settings'
 import './globals.css'
+
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }))
@@ -27,8 +27,8 @@ export async function generateMetadata(
     title = 'I am not Ares'
     description = 'Ares Wu personal site'
   }
-  if(lng === 'zh') {
-    title = 'I am not Ares'
+  if(lng === 'zh-CN') {
+    title = '禽兽(Ares)'
     description = 'Ares的个人网站'
   }
  
@@ -42,7 +42,7 @@ export default function RootLayout({children,params: { lng }}: any) {
   return (
     <html lang={lng} dir={dir(lng)} data-theme="dark">
       <body className={inter.className}>
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   )

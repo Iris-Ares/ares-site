@@ -1,17 +1,13 @@
 
-import styles from './page.module.css'
-import { useTranslation } from '^app/i18n'
-
-import Modal from '^lib/components/Modal'
+import Link from 'next/link'
+import { useTranslation } from '@/app/i18n'
+import { LanguageSwitch } from '@/lib/components'
 
 export default async function Home({ params: { lng } }:any) {
-  const { t } = await useTranslation(lng)
   return (
-    <main className={styles.main}>
-      <div className={styles.center}>
-        <h1 style={{fontSize:60}}>Ares Wu</h1>
-        <Modal />
-      </div>
-    </main>
+    <div className='h-full w-full flex items-center justify-center flex-col'>
+        <Link href={`/${lng}/dashboard`}><h1 style={{fontSize:60}}>Ares Wu</h1></Link>
+        <LanguageSwitch lng={lng} />
+    </div>
   )
 }

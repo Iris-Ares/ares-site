@@ -1,6 +1,15 @@
 
+
+
 export const fallbackLng = 'en'
-export const languages = [fallbackLng, 'zh']
+
+export const languageList = [
+  { code: 'en', name: 'English' },
+  { code: 'zh-CN', name: '简体中文(simplified chinese)' },
+]
+
+export const languages = languageList.map(l => l.code)
+
 export const defaultNS = 'translation'
 export const cookieName = 'i18next'
 
