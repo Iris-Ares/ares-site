@@ -1,7 +1,7 @@
 
 import { Inter } from 'next/font/google'
 import { Metadata, ResolvingMetadata } from 'next'
-
+import { useTranslation } from '@/app/i18n'
 import { dir } from 'i18next'
 import { languages } from '@/app/i18n/settings'
 import './globals.css'
@@ -19,22 +19,13 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { lng } = params
-
-  let title:string = ''
-  let description:string = ''
-
-  if(lng === 'en') {
-    title = 'I am not Ares'
-    description = 'Ares Wu personal site'
-  }
-  if(lng === 'zh-CN') {
-    title = '禽兽(Ares)'
-    description = 'Ares的个人网站'
-  }
+  // eslint-disable-next-line
+  const { t } =  await useTranslation(lng)
  
   return {
-    title,
-    description
+    title: t('title'),
+    description: t('description'),
+    creator: 'Ares Wu',
   }
 }
 

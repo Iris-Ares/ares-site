@@ -5,7 +5,8 @@ export const fallbackLng = 'en'
 
 export const languageList = [
   { code: 'en', name: 'English' },
-  { code: 'zh-CN', name: '简体中文(simplified chinese)' },
+  { code: 'zh', name: '中文' },
+  { code: 'ja', name: '日本語' },
 ]
 
 export const languages = languageList.map(l => l.code)
