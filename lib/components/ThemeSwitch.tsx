@@ -22,7 +22,7 @@ const ThemeSwitch = ({ lng }:any) => {
             <div className="dropdown " >
                 <label tabIndex={0}  className="m-1 btn" title='switch theme'><DesktopIcon /></label>
                 <div className='"dropdown-content bg-base-200 '>
-                    <ul tabIndex={0} className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-80  h-[200px] overflow-auto flex-col flex gap-2 flex-nowrap">
+                    <ul tabIndex={0} className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-80  max-h-[40vh] overflow-auto flex-col flex gap-2 flex-nowrap">
                         {
                             ThemeList.map((theme:string) => (
                                 <li className='w-full' key={theme} onClick={setTheme.bind(null,theme)}>
