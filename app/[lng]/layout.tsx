@@ -31,7 +31,7 @@ export async function generateMetadata(
 
 export default function RootLayout({children,params: { lng }}: any) {
   return (
-    <html lang={lng} dir={dir(lng)} data-theme="dark">
+    <html lang={lng} dir={dir(lng)} >
       <body className={inter.className}>
         <main>{children}</main>
       </body>

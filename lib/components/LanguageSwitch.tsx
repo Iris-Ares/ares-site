@@ -1,4 +1,3 @@
-'use client'
 
 import { LanguageIcon } from './icons';
 import { languageList } from '@/app/i18n/settings';
@@ -14,7 +13,7 @@ const LanguageSwitch = ({ lng }:any) => {
         <div className="flex items-center justify-center">
             
             <div className="dropdown" >
-                <label tabIndex={0}  className="m-1 btn"><LanguageIcon /></label>
+                <label tabIndex={0}  className="m-1 btn" title='switch language'><LanguageIcon /></label>
                 <div className='"dropdown-content bg-base-200'>
                     <ul tabIndex={0} className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                         {
