@@ -3,5 +3,12 @@
     "message": "Hi there! I am Ares.",
     "description": "personal website of Ares Wu",
     "developing":"still developing XD...🚧",
-    "happy":"😎"
+    "happy":"😎",
+    "welcome-1":"Welcome to my website",
+    "welcome-2":"I am a web developer",
+    "welcome-3":"this is my website",
+    "welcome-4":"built with nextjs",
+    "welcome-5":"tailwindcss",
+    "welcome-6":"typescript",
+    "welcome-7":"and LOVE <3"
 }

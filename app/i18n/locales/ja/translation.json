@@ -3,5 +3,12 @@
     "message": "お元気ですか? 私はAresだ.",
     "description": "Ares個人のウェブサイト",
     "developing":"開発中...🚧",
-    "happy":"╰(*°▽°*)╯"
+    "happy":"╰(*°▽°*)╯",
+    "welcome-1":"私のウェブサイトへようこそ",
+    "welcome-2":"私はウェブ開発者です",
+    "welcome-3":"これは私のウェブサイトです",
+    "welcome-4":"nextjsで構築",
+    "welcome-5":"とtailwindcss",
+    "welcome-6":"とtypescript",
+    "welcome-7":"と愛 （づ￣3￣）づ╭❤️～"
 }

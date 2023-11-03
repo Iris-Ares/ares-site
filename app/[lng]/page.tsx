@@ -15,11 +15,23 @@ export default async function Home({ params: { lng } }:any) {
 
         <Link href={`/${lng}/dashboard`}><span className='text-4xl font-extrabold'>{t('happy')}</span></Link>
         
-        <h2 className='animate-module_show_fade text-6xl mb-6 mt-6' >{t('message')}</h2>
+        <h2 className='animate-module_show_fade text-4xl lg:text-6xl mb-6 mt-6 text-center' >{t('message')}</h2>
 
         
 
-        <Welcome lng={lng} />
+        <Welcome 
+        sentences={
+          [
+            t('welcome-1'),
+            t('welcome-2'),
+            t('welcome-3'),
+            t('welcome-4'),
+            t('welcome-5'),
+            t('welcome-6'),
+            t('welcome-7'),
+          ]
+        }
+        />
 
         <button className='btn mt-4' title='developing' disabled><h3 className='animate-module_show_fade text-xl' >{t('developing')}</h3></button>
     </div>

@@ -12,17 +12,16 @@ const welcomeStringObj:any = {
 }
 
 
-const Welcome:React.FC<{lng?:any}> = ({lng}) => {
+const Welcome:React.FC<{sentences?:string[]}> = ({sentences}) => {
     const typed = useRef<null | any>(null)
 
     useEffect(() => {
-        console.count('Welcome')
         if(typed.current) {
             return
         }
-        if(!lng) return
+        if(!sentences) return
         typed.current = new Typed('#welcome-typed', {
-            strings: welcomeStringObj[lng],
+            strings: sentences,
             typeSpeed: 200,
             backSpeed: 100,
             backDelay: 400,
@@ -33,11 +32,11 @@ const Welcome:React.FC<{lng?:any}> = ({lng}) => {
             typed.current && typed.current.destroy()
             typed.current = null
         }
-    },[lng])
+    },[sentences])
 
 
     return (
-        <h3 className='animate-module_show_fade text-4xl mb-6' ><span id='welcome-typed' /></h3>
+        <h3 className='animate-module_show_fade text-2xl lg:text-4xl mb-6 text-center' ><span id='welcome-typed' /></h3>
     )
 
 }

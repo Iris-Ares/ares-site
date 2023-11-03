@@ -3,5 +3,12 @@
     "message": "你好,我是Ares Wu",
     "description": "Ares Wu的个人网站",
     "developing":"方兴未艾...🚧",
-    "happy":"😘"
+    "happy":"😘",
+    "welcome-1":"欢迎来到我的网站",
+    "welcome-2":"我是一个网页开发者",
+    "welcome-3":"这是我的网站",
+    "welcome-4":"使用nextjs",
+    "welcome-5":"tailwindcss",
+    "welcome-6":"typescript",
+    "welcome-7":"和爱 ❤️"
 }
