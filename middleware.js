@@ -20,9 +20,10 @@ export function middleware(req) {
     !languages.some(loc => req.nextUrl.pathname.startsWith(`/${loc}`)) &&
     !req.nextUrl.pathname.startsWith('/_next')
   ) {
-    return NextResponse.redirect(new URL(`/${lng}${req.nextUrl.pathname}`, req.url))
+    return NextResponse.redirect(new URL(`/${lng}/${req.nextUrl.pathname}`, req.url))
   }
 
+  // Set cookie if lng in path is supported
   if (req.headers.has('referer')) {
     const refererUrl = new URL(req.headers.get('referer'))
     const lngInReferer = languages.find((l) => refererUrl.pathname.startsWith(`/${l}`))
@@ -30,6 +31,7 @@ export function middleware(req) {
     if (lngInReferer) response.cookies.set(cookieName, lngInReferer)
     return response
   }
+
 
   return NextResponse.next()
 }

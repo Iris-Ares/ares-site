@@ -6,6 +6,8 @@ import { dir } from 'i18next'
 import { languages } from '@/app/i18n/settings'
 import './globals.css'
 
+import { LanguageSwitch , ThemeSwitch , NotionLink} from '@/lib/components'
+
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }))
@@ -33,7 +35,14 @@ export default function RootLayout({children,params: { lng }}: any) {
   return (
     <html lang={lng} dir={dir(lng)} >
       <body className={inter.className}>
-        <main>{children}</main>
+        <main>
+          <div className='flex items-center gap-3  absolute left-2 top-2 z-10'>
+            <LanguageSwitch lng={lng} />
+            <ThemeSwitch lng={lng} />
+            <NotionLink lng={lng} />
+          </div>
+          {children}
+        </main>
       </body>
     </html>
   )
