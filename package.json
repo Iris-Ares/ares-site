@@ -9,12 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@web3-react/coinbase-wallet": "^8.2.3",
-    "@web3-react/core": "^8.2.3",
-    "@web3-react/metamask": "^8.2.4",
     "accept-language": "^3.0.18",
     "daisyui": "^3.9.4",
-    "eventemitter3": "^5.0.1",
     "i18next": "^23.6.0",
     "i18next-resources-to-backend": "^1.1.4",
     "next": "^14.0.1",
