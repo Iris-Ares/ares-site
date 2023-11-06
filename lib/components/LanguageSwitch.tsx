@@ -5,7 +5,7 @@ import { languageList } from '@/app/i18n/settings';
 import Link from 'next/link';
 
 
-const LanguageSwitch = ({ lng }:any) => {
+const LanguageSwitch = ({ tip }:any) => {
     // console.log('lng', lng );
     
 
@@ -13,7 +13,9 @@ const LanguageSwitch = ({ lng }:any) => {
         <div className="flex items-center justify-center">
             
             <div className="dropdown" >
-                <label tabIndex={0}  className="m-1 btn" title='switch language'><LanguageIcon /></label>
+                <div className='tooltip tooltip-bottom' data-tip={tip} >
+                    <label tabIndex={0}  className="m-1 btn" ><LanguageIcon /></label>
+                </div>
                 <div className='"dropdown-content bg-base-200'>
                     <ul tabIndex={0} className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                         {

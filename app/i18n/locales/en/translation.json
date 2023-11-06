@@ -10,5 +10,9 @@
     "welcome-4":"built with nextjs",
     "welcome-5":"tailwindcss",
     "welcome-6":"typescript",
-    "welcome-7":"and LOVE <3"
+    "welcome-7":"and LOVE <3",
+    "tool-theme":"change theme",
+    "tool-language":"change language",
+    "link-note":"Ares's note",
+    "link-AI":"AI chat"
 }

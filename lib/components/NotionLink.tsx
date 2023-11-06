@@ -5,12 +5,12 @@ import { languageList } from '@/app/i18n/settings';
 import Link from 'next/link';
 
 
-const NotionLink = ({ lng }:any) => {
+const NotionLink = ({ tip }:any) => {
 
     
 
     return (
-        <a href='https://notion.imnotares.com' target='__blank' title="Ares's Notion" className='btn'><BookIcon /></a>
+        <div className='tooltip tooltip-bottom' data-tip={tip}><a href='https://notion.imnotares.com' target='__blank' title="Ares's Notion" className='btn'><BookIcon /></a></div>
     )
 }
 

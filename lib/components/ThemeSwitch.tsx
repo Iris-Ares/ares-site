@@ -1,15 +1,12 @@
 'use client'
 
-import { DesktopIcon } from './icons';
-import { languageList } from '@/app/i18n/settings';
+import { PaintBrushIcon } from './icons';
 
 import tailWindConfig from '../../tailwind.config.js' 
 
-import Link from 'next/link';
-
 const ThemeList = tailWindConfig.daisyui.themes
 
-const ThemeSwitch = ({ lng }:any) => {
+const ThemeSwitch = ({ tip }:any) => {
 
     const setTheme = (theme:string) => {
         document.querySelector('html')?.setAttribute('data-theme',theme)
@@ -20,7 +17,9 @@ const ThemeSwitch = ({ lng }:any) => {
         <div className="flex items-center justify-center">
             
             <div className="dropdown " >
-                <label tabIndex={0}  className="m-1 btn" title='switch theme'><DesktopIcon /></label>
+                <div className='tooltip tooltip-bottom' data-tip={tip} >
+                    <label tabIndex={0}  className="m-1 btn" ><PaintBrushIcon /></label>
+                </div>
                 <div className='"dropdown-content bg-base-200 '>
                     <ul tabIndex={0} className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-60 lg:w-80  max-h-[60vh] overflow-auto flex-col flex gap-2 flex-nowrap">
                         {

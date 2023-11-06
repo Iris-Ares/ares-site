@@ -10,5 +10,9 @@
     "welcome-4":"使用nextjs",
     "welcome-5":"tailwindcss",
     "welcome-6":"typescript",
-    "welcome-7":"和爱 ❤️"
+    "welcome-7":"和爱 ❤️",
+    "tool-theme":"切换主题",
+    "tool-language":"切换语言",
+    "link-note":"Ares的笔记",
+    "link-AI":"Ares的AI chat"
 }
