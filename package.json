@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.506",
     "accept-language": "^3.0.18",
     "daisyui": "^3.9.4",
     "i18next": "^23.6.0",
