@@ -5,8 +5,12 @@ import { languageList } from '@/app/i18n/settings';
 import Link from 'next/link';
 
 
-const LanguageSwitch = ({ tip }:any) => {
-    // console.log('lng', lng );
+
+interface LanguageSwitchProps  {
+    tip?: string;
+}
+
+const LanguageSwitch:React.FC<LanguageSwitchProps> = ({ tip }) => {
     
 
     return (
