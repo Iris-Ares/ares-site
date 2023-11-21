@@ -4,7 +4,6 @@ import ThemeSwitch from "./ThemeSwitch";
 import Welcome from "./Welcome";
 import NotionLink from "./NotionLink";
 import AiChatLink from "./AiChatLink";
-import AnimatedBackground from './AnimatedBackground'
 
 export { 
     Modal, 
@@ -13,5 +12,4 @@ export {
     AiChatLink,
     ThemeSwitch,
     Welcome,
-    AnimatedBackground
 };

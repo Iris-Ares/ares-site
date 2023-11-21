@@ -1,8 +1,4 @@
 
-import { BookIcon } from './icons';
-import { languageList } from '@/app/i18n/settings';
-
-import Link from 'next/link';
 
 
 const AiChatLink = ({ tip }:any) => {

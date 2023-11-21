@@ -1,19 +1,28 @@
 'use client'
-import { useEffect , useState,useRef } from "react"
+import { useEffect , useState,useRef ,useMemo} from "react"
 // @ts-ignore
 import Typed from 'typed.js'
-import { useTranslation } from '@/app/i18n'
+import { useClientTranslation} from '@/app/i18n'
+
+import type { BaseTypes } from '@/lib/types'
 
 
-const welcomeStringObj:any = {
-    en:['Welcome to my website','I am a web developer','this is my website','built with nextjs','and tailwindcss','and typescript','and love <3'],
-    zh:['欢迎来到我的网站','我是一个网页开发者','这是我的网站','使用nextjs','和tailwindcss','和typescript','和爱 ❤️'],
-    ja:['私のウェブサイトへようこそ','私はウェブ開発者です','これは私のウェブサイトです','nextjsで構築','とtailwindcss','とtypescript','と愛 （づ￣3￣）づ╭❤️～'],
-}
 
-
-const Welcome:React.FC<{sentences?:string[]}> = ({sentences}) => {
+const Welcome:BaseTypes.TranslatedFC = ({lng}) => {
+    const { t } = useClientTranslation(lng)
     const typed = useRef<null | any>(null)
+
+    const sentences = useMemo(()=>{
+        return [
+            t('welcome-1'),
+            t('welcome-2'),
+            t('welcome-3'),
+            t('welcome-4'),
+            t('welcome-5'),
+            t('welcome-6'),
+            t('welcome-7'),
+        ]
+    },[t])
 
     useEffect(() => {
         if(typed.current) {
@@ -24,9 +33,10 @@ const Welcome:React.FC<{sentences?:string[]}> = ({sentences}) => {
             strings: sentences,
             typeSpeed: 200,
             backSpeed: 100,
-            backDelay: 400,
+            backDelay: 900,
             showCursor: true,
-            smartBackspace: true
+            smartBackspace: true,
+            // loop: true,
         })
         return () => {
             typed.current && typed.current.destroy()
