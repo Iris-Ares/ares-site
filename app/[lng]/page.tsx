@@ -8,9 +8,9 @@ import { Welcome } from '@/lib/components'
 export default async function Home({ params: { lng } }:any) {
   const { t } = await useTranslation(lng)
   return (
-    <div className='h-full w-full flex items-center justify-center flex-col relative '>
+    <div className='h-full w-full flex items-center justify-center flex-col relative p-4'>
   
-        <div className='z-10 flex items-center justify-center flex-col rounded-box p-4 lg:p-6  backdrop-blur-sm shadow-lg'>
+        <div className='z-10 flex items-center justify-center flex-col rounded-box p-4   backdrop-blur-[3px] shadow-lg'>
           <Link href={`/${lng}/dashboard`}><span className='text-4xl font-extrabold'>{t('happy')}</span></Link>
           
           <h2 className='animate-module_show_fade text-4xl lg:text-5xl mb-6 mt-4 text-center' >{t('message')}</h2>
