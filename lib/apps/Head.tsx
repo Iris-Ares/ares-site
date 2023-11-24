@@ -1,4 +1,4 @@
-import { LanguageSwitch , ThemeSwitch , NotionLink , AiChatLink} from '@/lib/components'
+import { LanguageSwitch , ThemeSwitch , NotionLink , AiChatLink , ResumeLink} from '@/lib/components'
 
 import { useTranslation } from '@/app/i18n';
 
@@ -15,6 +15,7 @@ const Head:BaseTypes.TranslatedAsyncFC = async ({lng}) => {
             <ThemeSwitch tip={t('tool-theme')}  />
             <NotionLink tip={t('link-note')}  />
             <AiChatLink tip={t('link-AI')}  />
+            <ResumeLink tip={t('link-resume')}  />
         </div>
     )
 }
