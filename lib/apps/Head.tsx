@@ -10,12 +10,16 @@ const Head:BaseTypes.TranslatedAsyncFC = async ({lng}) => {
     const { t } = await useTranslation(lng);
 
     return (
-        <div className='flex items-center gap-3  absolute left-2 top-2 z-[100]'>
-            <LanguageSwitch tip={t('tool-language')} />
-            <ThemeSwitch tip={t('tool-theme')}  />
-            <NotionLink tip={t('link-note')}  />
-            <AiChatLink tip={t('link-AI')}  />
-            <ResumeLink tip={t('link-resume')}  />
+        <div className='flex items-center justify-between w-full absolute left-0 top-0 z-[100] px-3 py-2'>
+            <menu className='flex items-center gap-2'>
+                <LanguageSwitch tip={t('tool-language')} />
+                <ThemeSwitch tip={t('tool-theme')}  />
+            </menu>
+            <nav className='flex items-center gap-2 '>
+                <NotionLink tip={t('link-note')}  key='notion' />
+                <AiChatLink tip={t('link-AI')}   key='ai chat'/>
+                <ResumeLink tip={t('link-resume')} key='resume' />
+            </nav>
         </div>
     )
 }

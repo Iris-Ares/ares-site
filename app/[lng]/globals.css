@@ -4,8 +4,16 @@
 @tailwind utilities;
 @tailwind variants;
 
-main{
+body{
     height: 100vh;
     width: 100vw;
     overflow: auto;
+    position: relative;
+}
+
+main{
+    /* height: 100vh; */
+    /* width: 100vw; */
+    overflow: auto;
+    position: relative;
 }

@@ -6,7 +6,7 @@ import { dir } from 'i18next'
 import { languages } from '@/app/i18n/settings'
 import './globals.css'
 
-import { Head , AnimatedBackground } from '@/lib/apps'
+import {Head, AnimatedBackground } from '@/lib/apps'
 
 
 export async function generateStaticParams() {
@@ -36,12 +36,9 @@ export default async function RootLayout({children,params: { lng }}: any) {
   return (
     <html lang={lng} dir={dir(lng)} >
       <body className={inter.className}>
-        <main>
-          <AnimatedBackground />
-          <Head lng={lng} />
-          {children}
-          
-        </main>
+        <AnimatedBackground />
+        <Head lng={lng} />
+        {children}
       </body>
     </html>
   )
