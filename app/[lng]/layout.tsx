@@ -36,7 +36,7 @@ export default async function RootLayout({children,params: { lng }}: any) {
   return (
     <html lang={lng} dir={dir(lng)} >
       <body className={inter.className}>
-        <AnimatedBackground />
+        <AnimatedBackground key={'background'}/>
         <Head lng={lng} />
         {children}
       </body>

@@ -17,7 +17,7 @@ const LanguageSwitch:React.FC<LanguageSwitchProps> = ({ tip }) => {
         <div className="flex items-center justify-center">
             
             <div className="dropdown" >
-                <div className='tooltip tooltip-bottom' data-tip={tip} >
+                <div className='tooltip tooltip-right' data-tip={tip} >
                     <label tabIndex={0}  className="m-1 btn" ><LanguageIcon /></label>
                 </div>
                 <div className='"dropdown-content bg-base-200'>
