@@ -5,6 +5,7 @@ import Welcome from "./Welcome";
 import NotionLink from "./NotionLink";
 import AiChatLink from "./AiChatLink";
 import ResumeLink from "./ResumeLink";
+import GoogleAnalytics from "./GoogleAnalytics";
 
 export { 
     Modal, 
@@ -14,4 +15,5 @@ export {
     ThemeSwitch,
     Welcome,
     ResumeLink,
+    GoogleAnalytics
 };
