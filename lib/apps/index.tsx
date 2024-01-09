@@ -1,7 +1,7 @@
-import Head from "./Head";
+import NavBar from "./NavBar";
 import AnimatedBackground from "./AnimatedBackground";
 
 export {
-    Head,
+    NavBar,
     AnimatedBackground
 }

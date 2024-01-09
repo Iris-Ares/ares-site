@@ -6,7 +6,7 @@ import type { BaseTypes } from '@/lib/types';
 
 
 
-const Head:BaseTypes.TranslatedAsyncFC = async ({lng}) => {
+const NavBar:BaseTypes.TranslatedAsyncFC = async ({lng}) => {
     const { t } = await useTranslation(lng);
 
     return (
@@ -24,4 +24,4 @@ const Head:BaseTypes.TranslatedAsyncFC = async ({lng}) => {
     )
 }
 
-export default Head;
+export default NavBar;
