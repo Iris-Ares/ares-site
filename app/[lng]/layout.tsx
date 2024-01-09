@@ -4,6 +4,7 @@ import { Metadata, ResolvingMetadata } from 'next'
 import { useTranslation } from '@/app/i18n'
 import { dir } from 'i18next'
 import { languages } from '@/app/i18n/settings'
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css'
 
 import {NavBar, AnimatedBackground } from '@/lib/apps'
@@ -39,6 +40,7 @@ export default async function RootLayout({children,params: { lng }}: any) {
         <AnimatedBackground key={'background'}/>
         <NavBar lng={lng} />
         {children}
+        <Analytics />
       </body>
     </html>
   )
