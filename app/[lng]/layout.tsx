@@ -4,7 +4,6 @@ import { Metadata, ResolvingMetadata } from 'next'
 import { useTranslation } from '@/app/i18n'
 import { dir } from 'i18next'
 import { languages } from '@/app/i18n/settings'
-import { GoogleTagManager } from '@next/third-parties/google'
 import './globals.css'
 
 import {NavBar, AnimatedBackground } from '@/lib/apps'
@@ -41,7 +40,6 @@ export default async function RootLayout({children,params: { lng }}: any) {
         <NavBar lng={lng} />
         {children}
       </body>
-      <GoogleTagManager gtmId="GTM-PN55NHB3" />
     </html>
   )
 }
