@@ -7,7 +7,7 @@ import { GoogleAnalytics, Welcome } from '@/lib/components'
 export default async function Home({ params: { lng } }:any) {
   const { t } = await useTranslation(lng)
   return (
-    <GoogleAnalytics>
+    // <GoogleAnalytics>
       <main className='h-full w-full flex items-center justify-center flex-col relative p-4'>
           <div className='z-10 flex items-center justify-center flex-col rounded-box p-4   backdrop-blur-[3px] shadow-lg'>
             <Link href={`/${lng}/dashboard`}><span className='text-4xl font-extrabold'>{t('happy')}</span></Link>
@@ -22,6 +22,6 @@ export default async function Home({ params: { lng } }:any) {
           </div>
           
       </main>
-    </GoogleAnalytics>
+    {/* </GoogleAnalytics> */}
   )
 }
